@@ -66,7 +66,7 @@ pub async fn get_delegations_with_cache(
 
 pub async fn get_delegations() -> Result<Delegations, Box<dyn std::error::Error>> {
     info!("Downloading latest delegations from registries.");
-    let client = reqwest::Client::new();
+    let client = reqwest::Client::builder().use_sys_proxy().build()?;
     let mut pairs:Vec<(String, IpNet)> = try_join_all(
         vec![
             ("apnic", APNIC_DELEGATION),
