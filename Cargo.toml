@@ -11,7 +11,7 @@ categories = ["command-line-utilities", "compression", "network-programming"]
 [dependencies]
 reqwest = "0.10.0-alpha.1"
 futures-preview = { version = "=0.3.0-alpha.19", features = ["async-await"] }
-tokio = "0.2.0-alpha.6"
+tokio = "1.8.4"
 csv = "1.1"
 ipnet = {version = "2.0", features = ["serde"]}
 log = "0.4"
